@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li id="loginLink"><a href="login.html">Войти</a></li>
+            <li id="logoutLink" style="display:block;"><a href="#" onclick="logout()">Выйти</a></li>
+        </ul>
+    </nav>
+    <div class="user-data"></div>
+    <script defer>
+        function logout(){
+            localStorage.setItem('token','')
+            window.location.reload()
+        }
+        async function getDataUser() {
+            const data = await getCurrentUser()
+            if (data.status === 200) {
+                const divUserData = document.querySelector('.user-data')
+                divUserData.textContent = `${data.surname} ${data.name}`
+            }
+        }
+        document.addEventListener('DOMContentLoaded', async () => {
+            await getDataUser()
+        })
+    </script>
+</header>
+<main>
+    <h1>Список книг</h1>
+    <div id="books"></div>
+    <div id="pagination"></div>
+    <button id="addBookButton" style="display:block;" onclick="location.href='add-book.html'">Добавить книгу</button>
+</main>
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

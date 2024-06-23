@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li id="loginLink"><a href="login.html">Войти</a></li>
+        <li id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Выйти</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Добавить книгу</h1>
+    <form id="addBookForm" enctype="multipart/form-data">
+      <label for="title">Название:</label>
+      <input type="text" id="title" name="name" required>
+      <label for="title">Описание:</label>
+      <textarea id="description" name="description" required></textarea>
+      <label for="year">Год:</label>
+      <input type="number" id="year" name="year" required>
+      <label for="title">Издатель:</label>
+      <input type="text" id="publisher" name="publisher" required>
+      <label for="title">Автор:</label>
+      <input type="text" id="author" name="author" required>
+      <label for="year">Страницы:</label>
+      <input type="number" id="pages" name="pages" required>
+      <label for="genres">Жанры:</label>
+      <select id="genres" name="genres" multiple required></select>
+      <label for="image">Обложка:</label>
+      <input type="file" id="image" name="image" required>
+      <button type="submit">Сохранить</button>
+    </form>
+    <p id="errorMessage" style="color:red;"></p>
+  </main>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Review</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li id="loginLink"><a href="login.html">Войти</a></li>
+        <li id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Выйти</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Написать рецензию</h1>
+    <form id="reviewForm">
+      <label for="rating">Оценка:</label>
+      <select id="rating" name="rating" required>
+        <option value="5">Отлично</option>
+        <option value="4">Хорошо</option>
+        <option value="3">Удовлетворительно</option>
+        <option value="2">Неудовлетворительно</option>
+        <option value="1">Плохо</option>
+        <option value="0">Ужасно</option>
+      </select>
+      <label for="text">Текст рецензии:</label>
+      <textarea id="text" name="text" required></textarea>
+      <button type="submit" id="eblan">Закончить</button>
+    </form>
+    <p id="errorMessage" style="color:red;"></p>
+  </main>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

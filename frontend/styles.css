@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 1em;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin: 1em 0 0.5em;
+  }
+  
+  input, select, textarea, button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  #books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .book {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .book img {
+    max-width: 100%;
+  }
+  
+#allreviews{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+
+  .review-one{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    border-radius: 20px;
+  }
+
+  .review-in{
+    display: flex;
+    gap:5px;
+  }
+
+  .comment{
+    flex-direction: column;
+  }
+
+  #bookDetails{
+    display:flex;
+    justify-content: space-around;
+  }
+
+  img{
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .forget-div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+  }
+
+#forget{
+  width: 5%;
+}
